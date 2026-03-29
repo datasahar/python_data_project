@@ -1,4 +1,4 @@
-phoen_numbers = {'Amal':'1111111111',
+phone_numbers = {'Amal':'1111111111',
 'Mohammed':'2222222222',
 'Khadijah':'3333333333',
 'Abdullah':'4444444444',
@@ -21,10 +21,10 @@ def is_valid_number(number):
 
 # دالة البحث عن الأسم باستخدام الرقم
 def find_name_by_number():
-    phoen_number = input("Enter the phoen number: ")
-    if is_valid_number(phoen_number):
-        for name, number in phoen_numbers.items():
-            if phoen_number == number:
+    phone_number = input("Enter the phone number: ")
+    if is_valid_number(phone_number):
+        for name, number in phone_numbers.items():
+            if phone_number == number:
                 print(name)
                 return
         print("Sorry, the number is not found")
@@ -35,7 +35,7 @@ def find_name_by_number():
 # دالة البحث عن الرقم باستخدام الأسم
 def find_number_by_name():
     name = input("Enter the name: ")
-    for owner, number in phoen_numbers.items():
+    for owner, number in phone_numbers.items():
         if owner == name:
             print(number)
             return
@@ -47,7 +47,7 @@ def add_new_contact():
     new_name = input("Add new name: ")
     new_number = input("Add new number: ")
     if is_valid_number(new_number):
-        phoen_numbers[new_name] = new_number
+        phone_numbers[new_name] = new_number
         print("Contact added successfully!")
     else:
         print("This is invalid number")
